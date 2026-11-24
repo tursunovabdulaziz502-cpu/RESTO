@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RESTO</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b0b0c'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%23e5a93c' stroke-opacity='0.45' stroke-width='2'/%3E%3Ctext x='29' y='44' text-anchor='middle' fill='%23f4f1ea' font-family='Georgia, serif' font-size='34' font-weight='600'%3ER%3C/text%3E%3Ccircle cx='50' cy='41' r='4.5' fill='%23e5a93c'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader-screen" id="loaderScreen">
+    <div class="loader-box">
+      <div class="loader-ring"></div>
+      <span class="loader-logo">RESTO<span>.</span></span>
+    </div>
+  </div>
+
+  <header class="header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="logo">RESTO<span>.</span></a>
+      <div class="header-right">
+        <nav class="nav" id="navMenu">
+          <a href="#menu">Menu</a>
+          <a href="#about">Story</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#location">Location</a>
+        </nav>
+        <a href="#reserve" class="btn btn-gold header-btn">Reserve Table <i class="fa-solid fa-arrow-right"></i></a>
+        <button class="burger" id="burgerBtn" aria-label="Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="img/Стейк с овощами в тёмной сервировке.png" alt="" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="container hero-inner">
+      <div class="hero-content reveal">
+        <p class="eyebrow">SEASONAL FINE DINING</p>
+        <h1>Experience The<br />Art of Fine Dining</h1>
+        <p class="hero-desc">
+          An intimate culinary journey where seasonal ingredients, bold flavors, and warm hospitality come together.
+        </p>
+        <div class="hero-actions">
+          <a href="#reserve" class="btn btn-gold">Reserve Table <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#menu" class="btn btn-outline">Explore Menu <i class="fa-solid fa-arrow-down"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="container hero-bottom-bar reveal">
+      <span><i class="fa-regular fa-clock"></i> OPEN TUE – SUN · 5:00 PM – 11:00 PM</span>
+      <span><i class="fa-solid fa-location-dot"></i> 248 MERCER ST, NEW YORK</span>
+    </div>
+  </section>
+
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">CURATED SELECTION</p>
+        <h2>A menu to remember</h2>
+      </div>
+
+      <div class="filter-bar reveal" id="filterBar">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="pizza">Pizza</button>
+        <button class="filter-btn" data-category="mains">Mains</button>
+        <button class="filter-btn" data-category="seafood">Seafood</button>
+        <button class="filter-btn" data-category="drinks">Drinks</button>
+        <button class="filter-btn" data-category="desserts">Desserts</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <article class="dish-card reveal" data-category="pizza" data-title="Truffle Burrata Pizza" data-price="$24" data-desc="Wood-fired sourdough crust, creamy burrata, black truffle oil, and fresh basil.">
+          <div class="dish-img-box">
+            <img src="img/Wild mushroom pizza photograph.png" alt="" class="dish-img" />
+          </div>
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Truffle Burrata Pizza</h3>
+              <span class="price">$24</span>
+            </div>
+            <p>Wood-fired sourdough crust, creamy burrata, black truffle oil, and fresh basil.</p>
+            <div class="dish-footer">
+              <span class="tag">PIZZA</span>
+              <button class="link-btn view-dish-btn">ORDER <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card reveal" data-category="mains" data-title="The RESTO Burger" data-price="$22" data-desc="Dry-aged wagyu patty, aged cheddar, caramelized onion jam, brioche bun, and fries.">
+          <div class="dish-img-box">
+            <img src="img/The RESTO burger photograph.png" alt="" class="dish-img" />
+          </div>
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>The RESTO Burger</h3>
+              <span class="price">$22</span>
+            </div>
+            <p>Dry-aged wagyu patty, aged cheddar, caramelized onion jam, brioche bun, and fries.</p>
+            <div class="dish-footer">
+              <span class="tag">MAINS</span>
+              <button class="link-btn view-dish-btn">ORDER <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card reveal" data-category="mains" data-title="Herb-Crusted Rack of Lamb" data-price="$38" data-desc="Roasted rack of lamb with rosemary crust, parsnip puree, and red wine jus.">
+          <div class="dish-img-box">
+            <img src="img/Herb-crusted lamb photograph.png" alt="" class="dish-img" />
+          </div>
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Herb-Crusted Rack of Lamb</h3>
+              <span class="price">$38</span>
+            </div>
+            <p>Roasted rack of lamb with rosemary crust, parsnip puree, and red wine jus.</p>
+            <div class="dish-footer">
+              <span class="tag">MAINS</span>
+              <button class="link-btn view-dish-btn">ORDER <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card reveal" data-category="seafood" data-title="Pan-Seared Salmon" data-price="$32" data-desc="Wild Atlantic salmon, charred broccolini, saffron veloute, and herb oil.">
+          <div class="dish-img-box">
+            <img src="img/Pan-seared salmon photograph.png" alt="" class="dish-img" />
+          </div>
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Pan-Seared Salmon</h3>
+              <span class="price">$32</span>
+            </div>
+            <p>Wild Atlantic salmon, charred broccolini, saffron veloute, and herb oil.</p>
+            <div class="dish-footer">
+              <span class="tag">SEAFOOD</span>
+              <button class="link-btn view-dish-btn">ORDER <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card reveal" data-category="drinks" data-title="Midnight Old Fashioned" data-price="$16" data-desc="Small-batch bourbon, smoked orange peel, demerara syrup, and aromatic bitters.">
+          <div class="dish-img-box">
+            <img src="img/Midnight old fashioned photograph.png" alt="" class="dish-img" />
+          </div>
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Midnight Old Fashioned</h3>
+              <span class="price">$16</span>
+            </div>
+            <p>Small-batch bourbon, smoked orange peel, demerara syrup, and aromatic bitters.</p>
+            <div class="dish-footer">
+              <span class="tag">DRINKS</span>
+              <button class="link-btn view-dish-btn">ORDER <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+
+        <article class="dish-card reveal" data-category="desserts" data-title="Chocolate Lava Cake" data-price="$14" data-desc="Warm dark chocolate fondant, Madagascar vanilla bean gelato, and cocoa crumb.">
+          <div class="dish-img-box">
+            <img src="img/Chocolate délice photograph.png" alt="" class="dish-img" />
+          </div>
+          <div class="dish-body">
+            <div class="dish-top">
+              <h3>Chocolate Lava Cake</h3>
+              <span class="price">$14</span>
+            </div>
+            <p>Warm dark chocolate fondant, Madagascar vanilla bean gelato, and cocoa crumb.</p>
+            <div class="dish-footer">
+              <span class="tag">DESSERTS</span>
+              <button class="link-btn view-dish-btn">ORDER <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-more reveal">
+        <button class="link-btn" id="toggleExtraBtn">VIEW FULL MENU <i class="fa-solid fa-arrow-down"></i></button>
+      </div>
+
+      <div class="extra-menu hidden" id="extraMenu">
+        <div class="menu-grid">
+          <article class="dish-card" data-category="seafood" data-title="Butter Poached Lobster" data-price="$44" data-desc="Sweet Maine lobster tail poached in cultured butter with lemon herb emulsion.">
+            <div class="dish-img-box">
+              <img src="img/Something sweet.png" alt="" class="dish-img" />
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3>Butter Poached Lobster</h3>
+                <span class="price">$44</span>
+              </div>
+              <p>Sweet Maine lobster tail poached in cultured butter with lemon herb emulsion.</p>
+              <div class="dish-footer">
+                <span class="tag">SEAFOOD</span>
+                <button class="link-btn view-dish-btn">ORDER <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="dish-card" data-category="desserts" data-title="Roasted Fig Tiramisu" data-price="$15" data-desc="Espresso-soaked savoiardi, mascarpone cream, roasted figs, and dark cacao.">
+            <div class="dish-img-box">
+              <img src="img/An evening well poured.png" alt="" class="dish-img" />
+            </div>
+            <div class="dish-body">
+              <div class="dish-top">
+                <h3>Roasted Fig Tiramisu</h3>
+                <span class="price">$15</span>
+              </div>
+              <p>Espresso-soaked savoiardi, mascarpone cream, roasted figs, and dark cacao.</p>
+              <div class="dish-footer">
+                <span class="tag">DESSERTS</span>
+                <button class="link-btn view-dish-btn">ORDER <i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img src="img/A candlelit evening at RESTO.png" alt="" class="about-img" />
+        <div class="est-badge">
+          <span class="est-label">SINCE</span>
+          <strong class="est-year">2018</strong>
+        </div>
+      </div>
+      <div class="about-content reveal">
+        <p class="eyebrow">OUR PHILOSOPHY</p>
+        <h2>More than a meal.<br />A moment to savour.</h2>
+        <p class="about-text">
+          Founded with a passion for honest ingredients and refined technique, RESTO brings candlelit warmth and thoughtful craftsmanship to every table.
+        </p>
+        <ul class="about-points">
+          <li><i class="fa-solid fa-circle-check"></i> Locally sourced seasonal produce & prime cuts</li>
+          <li><i class="fa-solid fa-circle-check"></i> Curated cellar wines & signature craft cocktails</li>
+        </ul>
+        <a href="#reserve" class="link-btn">Reserve your table <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="gallery-top reveal">
+        <div>
+          <p class="eyebrow">THE ATMOSPHERE</p>
+          <h2>A feast for the senses</h2>
+        </div>
+        <a href="#reserve" class="link-btn">BOOK YOUR TABLE <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="gallery-layout">
+        <div class="gallery-main reveal">
+          <img src="img/A candlelit evening at RESTO.png" alt="" class="gallery-main-img" />
+        </div>
+        <div class="gallery-side">
+          <div class="gallery-item reveal">
+            <img src="img/The finishing touch.png" alt="" class="gallery-thumb-img" />
+          </div>
+          <div class="gallery-item reveal">
+            <img src="img/Signature salmon.png" alt="" class="gallery-thumb-img" />
+          </div>
+          <div class="gallery-item reveal">
+            <img src="img/Something sweet.png" alt="" class="gallery-thumb-img" />
+          </div>
+          <div class="gallery-item reveal">
+            <img src="img/An evening well poured.png" alt="" class="gallery-thumb-img" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="eyebrow">GUEST REVIEWS</p>
+        <h2>Memories, beautifully made.</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote">"An unforgettable evening from start to finish. Every course felt intentional, balanced, and deeply flavorful."</p>
+          </div>
+          <div class="reviewer-box">
+            <div class="reviewer-avatar">
+              <img src="img/Gemini_Generated_Image_d2qvjmd2qvjmd2qv.jpg" alt="" class="avatar-img" />
+            </div>
+            <div class="reviewer-info">
+              <span class="author">ELENA ROSTOVA</span>
+              <span class="author-role">Verified Guest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote">"The lighting, service, and menu create a calm luxury you rarely find. The rack of lamb is unmatched."</p>
+          </div>
+          <div class="reviewer-box">
+            <div class="reviewer-avatar">
+              <img src="img/Gemini_Generated_Image_d2qvjmd2qvjmd2qv (1).jpg" alt="" class="avatar-img" />
+            </div>
+            <div class="reviewer-info">
+              <span class="author">MARCUS VANCE</span>
+              <span class="author-role">Verified Guest</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card reveal">
+          <div>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="quote">"From the cocktails to the desserts, everything was executed with care. Our new favorite spot in the city."</p>
+          </div>
+          <div class="reviewer-box">
+            <div class="reviewer-avatar">
+              <img src="img/Gemini_Generated_Image_d2qvjmd2qvjmd2qv (2).jpg" alt="" class="avatar-img" />
+            </div>
+            <div class="reviewer-info">
+              <span class="author">CLAIRE BENNETT</span>
+              <span class="author-role">Verified Guest</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserve-section" id="reserve">
+    <div class="bg-media">
+      <img src="img/Роскошный вечер с вином и свечой.png" alt="" class="bg-img" />
+    </div>
+    <div class="reserve-overlay"></div>
+    <div class="container reserve-grid">
+      <div class="reserve-info reveal">
+        <p class="eyebrow">RESERVATIONS</p>
+        <h2>Make tonight<br />something special.</h2>
+        <p class="reserve-desc">
+          Whether it is a quiet dinner for two or a celebratory gathering, let us prepare a table tailored to your evening.
+        </p>
+        <a href="#location" class="link-btn">View opening hours <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <form class="reserve-box reveal" id="reserveForm">
+        <h3>Book your experience</h3>
+        <div class="form-row">
+          <div class="field">
+            <label>FIRST NAME</label>
+            <input type="text" id="firstName" placeholder="Jane" required />
+          </div>
+          <div class="field">
+            <label>LAST NAME</label>
+            <input type="text" id="lastName" placeholder="Doe" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label>EMAIL</label>
+            <input type="email" id="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="field">
+            <label>PHONE</label>
+            <input type="tel" id="phone" placeholder="+1 (555) 000-0000" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="field">
+            <label>DATE</label>
+            <input type="date" id="date" required />
+          </div>
+          <div class="field">
+            <label>GUESTS</label>
+            <select id="guests">
+              <option value="2 Guests">2 Guests</option>
+              <option value="3 Guests">3 Guests</option>
+              <option value="4 Guests">4 Guests</option>
+              <option value="6 Guests">6 Guests</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>SPECIAL REQUESTS</label>
+          <textarea id="requests" rows="2" placeholder="Allergies, anniversary, seating preference..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-gold full-btn">Reserve a Table <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="form-note">Instant confirmation for parties up to 6 guests.</p>
+        <div class="form-message hidden" id="formMessage"></div>
+      </form>
+    </div>
+  </section>
+
+  <section class="location-section" id="location">
+    <div class="container location-grid">
+      <div class="location-info reveal">
+        <p class="eyebrow">VISIT US</p>
+        <h2>We'll save you a seat.</h2>
+        <div class="info-block">
+          <span class="info-label"><i class="fa-solid fa-location-dot"></i> ADDRESS</span>
+          <p>248 Mercer Street, Suite 2B<br />New York, NY 10012</p>
+        </div>
+        <div class="info-block">
+          <span class="info-label"><i class="fa-solid fa-phone"></i> CONTACT</span>
+          <p>+1 (212) 555-0194<br />hello@resto-dining.com</p>
+        </div>
+        <div class="info-block">
+          <span class="info-label"><i class="fa-regular fa-clock"></i> HOURS</span>
+          <p>Tue – Thu: 5:00 PM – 10:30 PM<br />Fri – Sat: 5:00 PM – 11:30 PM<br />Sun: 4:30 PM – 9:30 PM</p>
+        </div>
+      </div>
+
+      <div class="map-box reveal">
+        <div class="bg-media">
+          <img src="img/Mayfair location map.png" alt="" class="bg-img" />
+        </div>
+        <div class="map-grid-lines"></div>
+        <div class="map-pin"><i class="fa-solid fa-location-dot"></i> RESTO</div>
+        <a href="#reserve" class="map-btn">Book here <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a href="#top" class="logo">RESTO<span>.</span></a>
+        <p>Fine dining crafted with intention, warmth, and seasonal character.</p>
+      </div>
+      <div class="footer-cols">
+        <div>
+          <h4>EXPLORE</h4>
+          <a href="#menu">Menu</a>
+          <a href="#about">Story</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#reviews">Reviews</a>
+        </div>
+        <div>
+          <h4>VISIT</h4>
+          <a href="#location">248 Mercer St</a>
+          <a href="#reserve">Reservations</a>
+          <a href="#location">Hours</a>
+        </div>
+        <div>
+          <h4>FOLLOW US</h4>
+          <div class="social-row">
+            <a href="#top" class="social-circle" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#top" class="social-circle" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#top" class="social-circle" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 RESTO. All rights reserved.</span>
+      <div>
+        <a href="#top">Privacy</a>
+        <a href="#top">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop hidden" id="dishModal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn"><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-img">
+        <img src="" alt="" id="modalImg" />
+      </div>
+      <div class="modal-body">
+        <span class="tag" id="modalTag">DISH</span>
+        <div class="modal-head">
+          <h3 id="modalTitle">Dish Name</h3>
+          <span class="price" id="modalPrice">$0</span>
+        </div>
+        <p id="modalDesc"></p>
+        <a href="#reserve" class="btn btn-gold full-btn" id="modalReserveBtn">Reserve Table for Tonight <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
